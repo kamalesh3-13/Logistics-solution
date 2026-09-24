@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Stackly</title>
+<meta name="description" content="Book a free assessment call with a Stackly account manager. No obligation, no sales pitch — just a conversation about your goals.">
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<style>
+.qp-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.qp-copy h2{max-width:14em}
+.qp-copy .lede{margin-top:18px;max-width:30em}
+.qp-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.qp-list li{display:flex;gap:14px;padding:20px;border:1px solid rgba(10,27,51,.12);border-radius:var(--r)}
+.qp-ic{flex:none;width:42px;height:42px;border-radius:12px;background:rgba(37,99,255,.1);color:var(--ember);display:grid;place-items:center}
+.qp-ic svg{width:22px;height:22px}
+.qp-list h3{font-size:17px;margin:0 0 6px}
+.qp-list p{margin:0;font-size:14.5px;line-height:1.5;opacity:.75}
+@media (max-width:900px){.qp-grid{grid-template-columns:1fr;gap:32px}}
+@media (max-width:560px){.qp-list{grid-template-columns:1fr}}
+@media (max-width:900px){ .nav-links,.nav-right{display:none !important;} .burger{display:flex !important;} }</style>
+</head>
+<body>
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Solutions</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a class="login" href="login.html">Log in</a>
+      <a class="nav-cta" href="contact.html">Get a Quote</a>
+    </div>
+    <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+  </nav>
+</header>
+
+<div class="mobile-nav-scrim" id="mobileNavScrim"></div>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Solutions</a>
+  <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a class="login" href="login.html">Log in</a>
+  <a class="nav-cta" href="contact.html">Get a Quote</a>
+</div>
+
+<section class="page-hero has-photo">
+  <div class="ph-photo"><img src="assets/img/hero-07.webp" alt="Container terminal with cranes" width="1400" height="900" decoding="async" fetchpriority="high" style="object-position:50% 32%"></div>
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Stackly</a> / Contact</div>
+    <h1 data-split>Let's talk before you commit.</h1>
+    <p class="lede">Every shipper starts with a free 20-minute call — no pitch, no pressure. Tell us where you're stuck and we'll tell you honestly if we're a fit.</p>
+  </div>
+</section>
+
+<!-- ===== QUOTE PREP ===== -->
+<section class="qp-sec">
+  <div class="wrap qp-grid">
+    <div class="qp-copy">
+      <h2>Have these four details ready for a faster quote.</h2>
+      <p class="lede">You don't need a finished brief. If you can answer these, we can price your first lanes on the call.</p>
+    </div>
+    <ul class="qp-list reveal-group">
+      <li><span class="qp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg></span><div><h3>Your lanes</h3><p>Where freight starts and ends: cities, ports or warehouse addresses.</p></div></li>
+      <li><span class="qp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg></span><div><h3>Weekly volume</h3><p>Roughly how many pallets, containers or parcels you move each week.</p></div></li>
+      <li><span class="qp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 10v10"/></svg></span><div><h3>What you ship</h3><p>Size and weight, plus anything temperature-controlled or hazardous.</p></div></li>
+      <li><span class="qp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Your timeline</h3><p>When you want to start, and any delivery windows or deadlines.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec-bone2">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="tag">Book a Call</div>
+      <h2 style="margin:14px 0 24px; font-size:clamp(24px,3vw,34px);">Tell us about your operations.</h2>
+      <form data-demo-form data-redirect-404>
+        <div class="f-row">
+          <div class="f-field"><label>First Name</label><input type="text" placeholder="Jordan" data-name-field required></div>
+          <div class="f-field"><label>Last Name</label><input type="text" placeholder="Miles" data-name-field required></div>
+        </div>
+        <div class="f-row">
+          <div class="f-field"><label>Email</label><input type="email" placeholder="jordan@email.com" required></div>
+          <div class="f-field"><label>Phone</label><input type="tel" placeholder="(555) 012-3456"></div>
+        </div>
+        <div class="f-field">
+          <label>Interested Solution</label>
+          <select>
+            <option>Warehousing &amp; Fulfilment</option>
+            <option>Freight &amp; Transport</option>
+            <option>Supply Chain Optimization</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="f-field">
+          <label>What are you operations for?</label>
+          <textarea placeholder="Tell us your goals, experience level, and any injuries an account manager should know about."></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid" style="width:100%;">Book My Free Call</button>
+      </form>
+    </div>
+    <div>
+      <div class="tag">Direct Contact</div>
+      <h2 style="margin:14px 0 24px; font-size:clamp(24px,3vw,34px);">Reach the team.</h2>
+      <div class="value-card" style="border-top-color:var(--ember); margin-bottom:18px;"><div class="vc-photo wide"><img src="assets/img/vc-con-1.webp" alt="Account manager talking a shipper through a delivery report" width="640" height="274" loading="lazy" decoding="async"></div>
+        <h3>Email</h3>
+        <p>account manager@stackly.example — we reply to every message within one business day.</p>
+      </div>
+      <div class="value-card" style="border-top-color:var(--ember); margin-bottom:18px;"><div class="vc-photo wide"><img src="assets/img/vc-con-2.webp" alt="Operations team checking stock with a tablet and clipboard" width="640" height="274" loading="lazy" decoding="async"></div>
+        <h3>Phone</h3>
+        <p>(555) 017-4488 — Monday to Friday, 8am–6pm. Leave a message and an account manager will call back.</p>
+      </div>
+      <div class="value-card" style="border-top-color:var(--ember);"><div class="vc-photo wide"><img src="assets/img/vc-con-3.webp" alt="Warehouse operative moving stock with a pallet jack" width="640" height="274" loading="lazy" decoding="async"></div>
+        <h3>Operations Floor</h3>
+        <p>412 Anvil Row, Unit 3, Denver, CO — in-person testing and quarterly sessions for Freight &amp; Transport shippers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section class="contact-map-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">Find Us</div>
+        <h2>412 Anvil Row, Unit 3, Denver, CO.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="map-embed">
+    <iframe src="https://www.google.com/maps?q=412+Anvil+Row,+Denver,+CO&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Stackly operations floor at 412 Anvil Row, Unit 3, Denver, CO"></iframe>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split-media">
+    <div class="m-copy">
+      <div class="tag">After You Hit Submit</div>
+      <h2>Here's exactly what happens next.</h2>
+      <p class="lede">No automated sales sequence, no seventeen-email drip campaign. Just three steps between your message and your first managed session.</p>
+      <div class="m-points">
+        <span>An account manager reviews your goals and matches you to a solution, usually same-day</span>
+        <span>You book a free 20-minute call directly on their calendar</span>
+        <span>If it's a fit, your first block starts within the week</span>
+      </div>
+    </div>
+    <div class="m-visual">
+      <div class="media-panel has-img tall" data-fx="brackets">
+        <img class="m-img" src="assets/img/panel-three-steps.webp" alt="Container ship loading at a port terminal" width="900" height="1008" loading="lazy" decoding="async">
+        <span class="fx" aria-hidden="true"></span>
+        <div class="m-tag">Three Steps, One Week</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-bone2">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">More Ways In</div>
+        <h2>Reach the team however's easiest.</h2>
+      </div>
+    </div>
+    <div class="feature-grid reveal-group" data-anim="pop">
+      <div class="feature-card" data-fx="spot"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="38" height="28" rx="2"/><polyline points="5,12 24,27 43,12"/></svg></div>
+        <h3>Email</h3>
+        <p>account manager@stackly.example — one business day, every time.</p>
+      </div>
+      <div class="feature-card" data-fx="scan"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h8l4 10-5 4c2 5 6 9 11 11l4-5 10 4v8c0 2-2 4-4 4C18 42 6 30 6 10c0-2 2-4 3-4z"/></svg></div>
+        <h3>Phone</h3>
+        <p>(555) 017-4488 — Monday to Friday, 8am–6pm.</p>
+      </div>
+      <div class="feature-card" data-fx="glow"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10h36v22H16l-10 9V10z"/></svg></div>
+        <h3>Social DMs</h3>
+        <p>Quick questions about a solution answered directly, most days.</p>
+      </div>
+      <div class="feature-card" data-fx="shine"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44s15-14 15-25a15 15 0 0 0-30 0c0 11 15 25 15 25z"/><circle cx="24" cy="19" r="5.5"/></svg></div>
+        <h3>In Person</h3>
+        <p>412 Anvil Row, Unit 3 — Freight &amp; Transport testing days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">Free Call vs. Guessing</div>
+        <h2>Why the assessment call comes first.</h2>
+      </div>
+    </div>
+    <div class="compare-wrap reveal-group">
+      <div class="compare-card no">
+        <h3>Skipping Straight to a Solution</h3>
+        <ul>
+          <li>You get assigned a solution before anyone knows your injury history</li>
+          <li>Equipment mismatches surface in week one, not before you start</li>
+          <li>No chance to ask questions before your card is charged</li>
+        </ul>
+      </div>
+      <div class="compare-card win">
+        <h3>Free Audit Call First</h3>
+        <ul>
+          <li>Your account manager hears your goals, history and schedule before writing anything</li>
+          <li>You find out honestly if Stackly is the right fit — no pressure either way</li>
+          <li>Your first block is built around the actual conversation you just had</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-dark on-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">Before You Write In</div>
+        <h2>Quick answers.</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q"><span>How fast will I hear back?</span><span class="plus">+</span></button>
+        <div class="faq-a" style="height:auto;"><p>Within one business day, usually sooner. We'll send a link to book your free 20-minute assessment call directly on an account manager's calendar.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Is the assessment call really free?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. No card required, no obligation. It's a real conversation about your goals — if we're not a fit, we'll say so and point you elsewhere.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Do you account manager outside the US?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — all account management happens remotely through the shipper dashboard and delivery proof check-ins, so timezone is the only real constraint.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-dark" style="background:var(--char); padding:0;">
+  <div class="logo-band" style="border-color:var(--line-dark);">
+    <div class="wrap">
+      <div class="lb-label">Remote account management, real time zones covered</div>
+      <div style="overflow:hidden;">
+        <div class="logo-track">
+          <span>Pacific</span><span>Mountain</span><span>Central</span><span>Eastern</span><span>GMT</span><span>Central Europe</span>
+          <span>Pacific</span><span>Mountain</span><span>Central</span><span>Eastern</span><span>GMT</span><span>Central Europe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42">
+        </a>
+        <p>Capacity and performance account management, built around your schedule, your equipment and your goals — not a template.</p>
+        <div class="foot-social">
+          <a href="404.html" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="404.html" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg></a>
+          <a href="404.html" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+        </div>
+        <div class="foot-contact">
+          <span>412 Anvil Row, Unit 3, Denver, CO</span>
+          <span>(555) 017-4488</span>
+          <span>account manager@stackly.example</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Solutions</h4>
+        <a href="services.html">Warehousing &amp; Fulfilment</a>
+        <a href="services.html">Freight &amp; Transport</a>
+        <a href="services.html">Supply Chain Optimization</a>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Solutions</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="foot-col foot-newsletter">
+        <h4>Newsletter</h4>
+        <p>Logistics insights, once a week.</p>
+        <form class="foot-nl-form" data-demo-form>
+          <input type="email" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Stackly. All rights reserved.</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
