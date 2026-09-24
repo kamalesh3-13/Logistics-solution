@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings — Stackly Account Manager Dashboard</title>
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<script>
+/* Dashboard access guard: only reachable after logging in with the matching role */
+(function(){ var r=null; try{ r=sessionStorage.getItem('stackly_role'); }catch(e){} if(r!=='manager') window.location.replace('login.html'); })();
+</script>
+</head>
+<body class="dash-body">
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<div class="dash-topbar">
+  <a href="manager-settings.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+  <button type="button" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+<div class="dash-scrim" id="dashScrim"></div>
+
+<div class="dash-shell">
+  <aside class="dash-side" id="dashSide">
+    <a class="dash-brand" href="manager-settings.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+    <div class="dash-user"><span class="roster-avatar" data-user-initials>CM</span><div><b data-user-name>Account Manager Marcus</b><small data-user-email>marcus@stackly.com</small><i>Account Manager account</i></div></div>
+    <div class="dash-nav-label">Menu</div>
+    <nav class="dash-nav"><a href="dashboard-manager.html">Overview</a><a href="manager-shippers.html">My Shippers</a><a href="manager-reviews.html">Delivery Proof Review Queue</a><a href="manager-messages.html">Messages</a><a href="manager-planning.html">Planning</a><a href="manager-payouts.html">Payouts</a><a href="manager-settings.html" class="active">Settings</a></nav>
+    <a class="dash-logout" href="login.html" data-logout>Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>Settings</h1>
+        <p style="margin-top:6px;">Profile, availability and account security</p>
+      </div>
+      <a class="btn btn-solid btn-sm" href="404.html">Save Changes</a>
+    </div>
+    <section class="dash-panel"><h3>Account snapshot</h3><div class="dash-cards"><div class="dash-card"><div class="d-num">Head of Operations</div><div class="d-lbl">Role</div></div><div class="dash-card"><div class="d-num">24</div><div class="d-lbl">Shippers</div></div><div class="dash-card"><div class="d-num">Mon–Fri</div><div class="d-lbl">Availability</div></div><div class="dash-card"><div class="d-num">On</div><div class="d-lbl">2-Step Login</div></div></div></section><section class="dash-panel"><h3><span id="profile"></span>Profile</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field "><label>Full name</label><input type="text" placeholder="Marcus Cole" required></div><div class="f-field "><label>Email</label><input type="email" placeholder="marcus@stackly.com" required></div><div class="f-field "><label>Title</label><input type="text" placeholder="Head of Operations · Capacity"></div><div class="f-field "><label>Bio</label><textarea rows="3" placeholder="Tell shippers about your account management…"></textarea></div></div><button type="submit" class="btn btn-solid btn-sm">Save Profile</button></form></section><section class="dash-panel"><h3>Availability</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field "><label>Days</label><select><option>Mon–Fri</option><option>Mon–Sat</option><option>Custom</option></select></div><div class="f-field "><label>Start time</label><input type="text" placeholder="8:00 AM" required></div><div class="f-field "><label>End time</label><input type="text" placeholder="6:00 PM" required></div><div class="f-field "><label>Reply window</label><select><option>Within 24 hours</option><option>Within 12 hours</option></select></div></div><button type="submit" class="btn btn-solid btn-sm">Save Availability</button></form></section><section class="dash-panel"><h3>Notifications</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field f-tog"><label>New delivery proof submitted</label><label class="tog"><input type="checkbox" checked><span></span></label></div><div class="f-field f-tog"><label>New shipper message</label><label class="tog"><input type="checkbox" checked><span></span></label></div><div class="f-field f-tog"><label>Payout sent</label><label class="tog"><input type="checkbox" ><span></span></label></div><div class="f-field f-tog"><label>Weekly summary</label><label class="tog"><input type="checkbox" checked><span></span></label></div></div><button type="submit" class="btn btn-solid btn-sm">Save Notifications</button></form></section><section class="dash-panel"><h3>Account Management preferences</h3><form class="dash-form" data-demo-form><div class="df-grid"><div class="f-field "><label>Default delivery proof reply</label><select><option>Written cue</option><option>Voice note</option></select></div><div class="f-field "><label>Units</label><select><option>Pounds</option><option>Kilograms</option></select></div><div class="f-field "><label>Default block length</label><select><option>12 weeks</option><option>8 weeks</option></select></div></div><button type="submit" class="btn btn-solid btn-sm">Save Preferences</button></form></section><section class="dash-panel"><h3>Integrations</h3><div class="dash-minis"><div class="mini"><b>Calendar</b><p>Sync calls and retest slots.</p><span>Connected</span></div><div class="mini"><b>Delivery Proof storage</b><p>Shipper uploads and reviews.</p><span>Connected</span></div><div class="mini"><b>Payments</b><p>Payout account.</p><span>Connected</span></div></div></section><section class="dash-panel"><h3>Security</h3><form class="dash-form" data-demo-form><div class="df-grid"><div class="f-field "><label>Current password</label><input type="password" placeholder="••••••••"></div><div class="f-field "><label>New password</label><input type="password" placeholder="At least 8 characters"></div><div class="f-field f-tog"><label>Two-step login</label><label class="tog"><input type="checkbox" checked><span></span></label></div></div><button type="submit" class="btn btn-solid btn-sm">Update Security</button></form></section>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var side=document.getElementById('dashSide'), scrim=document.getElementById('dashScrim'), btn=document.getElementById('dashMenuBtn');
+  function set(o){ side.classList.toggle('open',o); scrim.classList.toggle('show',o); }
+  btn.addEventListener('click',function(){ set(!side.classList.contains('open')); });
+  scrim.addEventListener('click',function(){ set(false); });
+  document.querySelectorAll('[data-demo-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){ e.preventDefault(); var b=f.querySelector('button[type=submit]'); b.textContent='Saved ✓'; b.disabled=true; setTimeout(function(){ b.disabled=false; b.textContent=b.getAttribute('data-label')||'Save'; },1800); });
+    var b=f.querySelector('button[type=submit]'); b.setAttribute('data-label',b.textContent);
+  });
+  var em='', nm='';
+  try{ em=sessionStorage.getItem('stackly_email')||''; nm=sessionStorage.getItem('stackly_name')||''; }catch(e){}
+  if(!nm && em){ nm=em.split('@')[0].replace(/[._+\-]+/g,' ').replace(/[0-9]+/g,'').trim().split(/\s+/).filter(Boolean).map(function(w){ return w.charAt(0).toUpperCase()+w.slice(1); }).join(' '); }
+  function fill(sel,v){ document.querySelectorAll(sel).forEach(function(n){ n.textContent=v; }); }
+  if(nm){ var pt=nm.split(' '); fill('[data-first]',pt[0]); fill('[data-user-name]',nm); fill('[data-user-initials]',((pt[0]||'')[0]||'')+((pt[1]||'')[0]||'')); }
+  if(em){ fill('[data-user-email]',em); }
+  if(typeof gsap!=='undefined'){
+    gsap.utils.toArray('.dash-card').forEach(function(c,i){ gsap.fromTo(c,{opacity:0,y:16},{opacity:1,y:0,duration:0.5,delay:i*0.08,ease:'power2.out'}); });
+    gsap.fromTo('.dash-bars .b',{scaleY:0},{scaleY:1,transformOrigin:'bottom',duration:0.8,stagger:0.06,ease:'power3.out',delay:0.2});
+    gsap.utils.toArray('.dash-panel').forEach(function(p,i){ gsap.fromTo(p,{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.15+i*0.06,ease:'power2.out'}); });
+  }
+})();
+</script>
+</body>
+</html>

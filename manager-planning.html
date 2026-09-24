@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning — Stackly Account Manager Dashboard</title>
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<script>
+/* Dashboard access guard: only reachable after logging in with the matching role */
+(function(){ var r=null; try{ r=sessionStorage.getItem('stackly_role'); }catch(e){} if(r!=='manager') window.location.replace('login.html'); })();
+</script>
+</head>
+<body class="dash-body">
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<div class="dash-topbar">
+  <a href="manager-planning.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+  <button type="button" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+<div class="dash-scrim" id="dashScrim"></div>
+
+<div class="dash-shell">
+  <aside class="dash-side" id="dashSide">
+    <a class="dash-brand" href="manager-planning.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+    <div class="dash-user"><span class="roster-avatar" data-user-initials>CM</span><div><b data-user-name>Account Manager Marcus</b><small data-user-email>marcus@stackly.com</small><i>Account Manager account</i></div></div>
+    <div class="dash-nav-label">Menu</div>
+    <nav class="dash-nav"><a href="dashboard-manager.html">Overview</a><a href="manager-shippers.html">My Shippers</a><a href="manager-reviews.html">Delivery Proof Review Queue</a><a href="manager-messages.html">Messages</a><a href="manager-planning.html" class="active">Planning</a><a href="manager-payouts.html">Payouts</a><a href="manager-settings.html">Settings</a></nav>
+    <a class="dash-logout" href="login.html" data-logout>Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>Planning</h1>
+        <p style="margin-top:6px;">Build, tweak and schedule operations blocks</p>
+      </div>
+      <a class="btn btn-solid btn-sm" href="404.html">New Block</a>
+    </div>
+    <section class="dash-panel"><h3>Snapshot</h3><div class="dash-cards"><div class="dash-card"><div class="d-num">6</div><div class="d-lbl">Active Plans</div></div><div class="dash-card"><div class="d-num">12</div><div class="d-lbl">Templates</div></div><div class="dash-card"><div class="d-num">4</div><div class="d-lbl">Buffer Stock Reviews This Month</div></div><div class="dash-card"><div class="d-num">38%</div><div class="d-lbl">Avg Capacity Gain</div></div></div></section><section class="dash-panel"><h3>Active plans</h3><table class="dash-table"><thead><tr><th>Plan</th><th>Shippers</th><th>Phase</th><th>Ends</th></tr></thead><tbody><tr><td>Warehousing &amp; Fulfilment · A</td><td>7</td><td>Ramp-Up</td><td>Oct 12</td></tr><tr><td>Warehousing &amp; Fulfilment · B</td><td>5</td><td>Scaling</td><td>Nov 02</td></tr><tr><td>Peak Season Surge</td><td>6</td><td>Peak</td><td>Oct 05</td></tr><tr><td>Cost Optimization Sprint</td><td>4</td><td>Steady</td><td>Nov 16</td></tr></tbody></table></section><section class="dash-panel"><h3><span id="builder"></span>Build a plan</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field "><label>Plan name</label><input type="text" placeholder="e.g. Foundations · C" required></div><div class="f-field "><label>Length</label><select><option>8 weeks</option><option>10 weeks</option><option>12 weeks</option></select></div><div class="f-field "><label>Focus</label><select><option>Capacity</option><option>Cost per Shipment</option><option>Transit Time</option></select></div><div class="f-field "><label>Notes</label><textarea rows="3" placeholder="Optimization, buffer stock rules…"></textarea></div></div><button type="submit" class="btn btn-solid btn-sm">Create Plan</button></form></section><section class="dash-panel"><h3>Route library</h3><div class="dash-minis"><div class="mini"><b>Cross-Dock Transfer</b><p>Primary hub-to-hub leg.</p><span>Freight</span></div><div class="mini"><b>Last-Mile Loop</b><p>Primary urban delivery.</p><span>Courier</span></div><div class="mini"><b>Pallet Line Haul</b><p>Primary long-distance route.</p><span>Freight</span></div><div class="mini"><b>Regional Feeder</b><p>Depot-to-depot leg.</p><span>Warehousing</span></div><div class="mini"><b>Rail Spur</b><p>Intermodal transfer.</p><span>Rail</span></div><div class="mini"><b>Zone Micro-Route</b><p>Single-driver delivery loop.</p><span>Courier</span></div></div></section><section class="dash-panel"><h3>Weekly volume targets</h3><div class="prog-list"><div class="prog-row"><div class="pr-top"><b>Cross-Dock legs / week</b><span>12 / 16</span></div><div class="pr-track"><span style="width:75%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Last-Mile loops / week</b><span>12 / 15</span></div><div class="pr-track"><span style="width:80%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Line-haul legs / week</b><span>18 / 20</span></div><div class="pr-track"><span style="width:90%"></span></div></div></div></section><section class="dash-panel"><h3>Templates</h3><table class="dash-table"><thead><tr><th>Template</th><th>Length</th><th>Level</th><th>Used</th></tr></thead><tbody><tr><td>Foundations 12-week</td><td>12 wks</td><td>New Client</td><td>12×</td></tr><tr><td>Peak-Season 8-week</td><td>8 wks</td><td>Advanced</td><td>6×</td></tr><tr><td>Network Reset</td><td>6 wks</td><td>Any</td><td>4×</td></tr></tbody></table></section><section class="dash-panel"><h3>Buffer stock review schedule</h3><ul class="feed"><li><span class="f-dot"></span><div><b>Dana W.</b><small>Buffer stock review, week 7</small></div><em>Sep 29</em></li><li><span class="f-dot"></span><div><b>Jordan M.</b><small>Buffer stock review, week 10</small></div><em>Oct 20</em></li><li><span class="f-dot"></span><div><b>Sam K.</b><small>Buffer stock review, week 4</small></div><em>Oct 06</em></li></ul></section>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var side=document.getElementById('dashSide'), scrim=document.getElementById('dashScrim'), btn=document.getElementById('dashMenuBtn');
+  function set(o){ side.classList.toggle('open',o); scrim.classList.toggle('show',o); }
+  btn.addEventListener('click',function(){ set(!side.classList.contains('open')); });
+  scrim.addEventListener('click',function(){ set(false); });
+  document.querySelectorAll('[data-demo-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){ e.preventDefault(); var b=f.querySelector('button[type=submit]'); b.textContent='Saved ✓'; b.disabled=true; setTimeout(function(){ b.disabled=false; b.textContent=b.getAttribute('data-label')||'Save'; },1800); });
+    var b=f.querySelector('button[type=submit]'); b.setAttribute('data-label',b.textContent);
+  });
+  var em='', nm='';
+  try{ em=sessionStorage.getItem('stackly_email')||''; nm=sessionStorage.getItem('stackly_name')||''; }catch(e){}
+  if(!nm && em){ nm=em.split('@')[0].replace(/[._+\-]+/g,' ').replace(/[0-9]+/g,'').trim().split(/\s+/).filter(Boolean).map(function(w){ return w.charAt(0).toUpperCase()+w.slice(1); }).join(' '); }
+  function fill(sel,v){ document.querySelectorAll(sel).forEach(function(n){ n.textContent=v; }); }
+  if(nm){ var pt=nm.split(' '); fill('[data-first]',pt[0]); fill('[data-user-name]',nm); fill('[data-user-initials]',((pt[0]||'')[0]||'')+((pt[1]||'')[0]||'')); }
+  if(em){ fill('[data-user-email]',em); }
+  if(typeof gsap!=='undefined'){
+    gsap.utils.toArray('.dash-card').forEach(function(c,i){ gsap.fromTo(c,{opacity:0,y:16},{opacity:1,y:0,duration:0.5,delay:i*0.08,ease:'power2.out'}); });
+    gsap.fromTo('.dash-bars .b',{scaleY:0},{scaleY:1,transformOrigin:'bottom',duration:0.8,stagger:0.06,ease:'power3.out',delay:0.2});
+    gsap.utils.toArray('.dash-panel').forEach(function(p,i){ gsap.fromTo(p,{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.15+i*0.06,ease:'power2.out'}); });
+  }
+})();
+</script>
+</body>
+</html>

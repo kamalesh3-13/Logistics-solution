@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Shippers — Stackly Account Manager Dashboard</title>
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<script>
+/* Dashboard access guard: only reachable after logging in with the matching role */
+(function(){ var r=null; try{ r=sessionStorage.getItem('stackly_role'); }catch(e){} if(r!=='manager') window.location.replace('login.html'); })();
+</script>
+</head>
+<body class="dash-body">
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<div class="dash-topbar">
+  <a href="manager-shippers.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+  <button type="button" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+<div class="dash-scrim" id="dashScrim"></div>
+
+<div class="dash-shell">
+  <aside class="dash-side" id="dashSide">
+    <a class="dash-brand" href="manager-shippers.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+    <div class="dash-user"><span class="roster-avatar" data-user-initials>CM</span><div><b data-user-name>Account Manager Marcus</b><small data-user-email>marcus@stackly.com</small><i>Account Manager account</i></div></div>
+    <div class="dash-nav-label">Menu</div>
+    <nav class="dash-nav"><a href="dashboard-manager.html">Overview</a><a href="manager-shippers.html" class="active">My Shippers</a><a href="manager-reviews.html">Delivery Proof Review Queue</a><a href="manager-messages.html">Messages</a><a href="manager-planning.html">Planning</a><a href="manager-payouts.html">Payouts</a><a href="manager-settings.html">Settings</a></nav>
+    <a class="dash-logout" href="login.html" data-logout>Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>My Shippers</h1>
+        <p style="margin-top:6px;">Everyone you account manager, at a glance</p>
+      </div>
+      <a class="btn btn-solid btn-sm" href="404.html">Invite an Shipper</a>
+    </div>
+    <section class="dash-panel"><h3>Snapshot</h3><div class="dash-cards"><div class="dash-card"><div class="d-num">24</div><div class="d-lbl">Active Shippers</div></div><div class="dash-card"><div class="d-num">3</div><div class="d-lbl">New This Month</div></div><div class="dash-card"><div class="d-num">91%</div><div class="d-lbl">Avg Compliance</div></div><div class="dash-card"><div class="d-num">2</div><div class="d-lbl">At Risk</div></div></div></section><section class="dash-panel"><h3>Roster</h3><table class="dash-table dash-roster"><thead><tr><th>Shipper</th><th>Solution</th><th>Week</th><th>Compliance</th></tr></thead><tbody><tr><td><div class="roster-name"><span class="roster-avatar">JM</span>Jordan M.</div></td><td>Warehousing &amp; Fulfilment</td><td>7 / 12</td><td><span class="compliance-bar"><span style="width:92%"></span></span>92%</td></tr><tr><td><div class="roster-name"><span class="roster-avatar">PS</span>Priya S.</div></td><td>Freight &amp; Transport</td><td>4 / 12</td><td><span class="compliance-bar"><span style="width:96%"></span></span>96%</td></tr><tr><td><div class="roster-name"><span class="roster-avatar">AR</span>Alex R.</div></td><td>Supply Chain Optimization</td><td>9 / 12</td><td><span class="compliance-bar"><span style="width:78%"></span></span>78%</td></tr><tr><td><div class="roster-name"><span class="roster-avatar">SK</span>Sam K.</div></td><td>Warehousing &amp; Fulfilment</td><td>2 / 12</td><td><span class="compliance-bar"><span style="width:88%"></span></span>88%</td></tr><tr><td><div class="roster-name"><span class="roster-avatar">DW</span>Dana W.</div></td><td>Freight &amp; Transport</td><td>6 / 12</td><td><span class="compliance-bar"><span style="width:94%"></span></span>98%</td></tr><tr><td><div class="roster-name"><span class="roster-avatar">MT</span>Marcus T.</div></td><td>Warehousing &amp; Fulfilment</td><td>10 / 12</td><td><span class="compliance-bar"><span style="width:85%"></span></span>85%</td></tr><tr><td><div class="roster-name"><span class="roster-avatar">EL</span>Erin L.</div></td><td>Supply Chain Optimization</td><td>3 / 12</td><td><span class="compliance-bar"><span style="width:97%"></span></span>97%</td></tr></tbody></table></section><section class="dash-panel"><h3>Compliance by shipper</h3><div class="prog-list"><div class="prog-row"><div class="pr-top"><b>Jordan M.</b><span>92%</span></div><div class="pr-track"><span style="width:92%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Priya S.</b><span>96%</span></div><div class="pr-track"><span style="width:96%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Alex R.</b><span>78%</span></div><div class="pr-track"><span style="width:78%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Sam K.</b><span>88%</span></div><div class="pr-track"><span style="width:88%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Dana W.</b><span>98%</span></div><div class="pr-track"><span style="width:94%"></span></div></div></div></section><section class="dash-panel"><h3>Solution split</h3><div class="dash-minis"><div class="mini"><b>Warehousing &amp; Fulfilment</b><p>Storage and pick-pack fundamentals.</p><span>12 shippers</span></div><div class="mini"><b>Freight &amp; Transport</b><p>Lane-specific capacity planning.</p><span>8 shippers</span></div><div class="mini"><b>Supply Chain Optimization</b><p>Cost plus inventory tuning.</p><span>4 shippers</span></div></div></section><section class="dash-panel"><h3>Recent milestones</h3><ul class="feed"><li><span class="f-dot"></span><div><b>Jordan M. — 315 lbs shipment</b><small>Heaviest single load this block</small></div><em>Sep 15</em></li><li><span class="f-dot"></span><div><b>Priya S. — 185 lbs, new best time</b><small>Fastest transit on this lane</small></div><em>Sep 14</em></li><li><span class="f-dot"></span><div><b>Erin L. — 275 lbs pallet run</b><small>First time over 2× standard load</small></div><em>Sep 12</em></li></ul></section><section class="dash-panel"><h3>At-risk shippers</h3><table class="dash-table"><thead><tr><th>Shipper</th><th>Reason</th><th>Last Session</th><th>Action</th></tr></thead><tbody><tr><td>Alex R.</td><td>Missed 2 sessions</td><td>6 days ago</td><td><span class="dash-pill due">Check In</span></td></tr><tr><td>Marcus T.</td><td>Vehicle downtime</td><td>2 days ago</td><td><span class="dash-pill due">Adjust Plan</span></td></tr></tbody></table></section><section class="dash-panel"><h3><span id="invite"></span>Invite a shipper</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field "><label>Name</label><input type="text" placeholder="Shipper name" required></div><div class="f-field "><label>Email</label><input type="email" placeholder="shipper@email.com" required></div><div class="f-field "><label>Solution</label><select><option>Warehousing &amp; Fulfilment</option><option>Freight &amp; Transport</option><option>Supply Chain Optimization</option></select></div></div><button type="submit" class="btn btn-solid btn-sm">Send Invite</button></form></section>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var side=document.getElementById('dashSide'), scrim=document.getElementById('dashScrim'), btn=document.getElementById('dashMenuBtn');
+  function set(o){ side.classList.toggle('open',o); scrim.classList.toggle('show',o); }
+  btn.addEventListener('click',function(){ set(!side.classList.contains('open')); });
+  scrim.addEventListener('click',function(){ set(false); });
+  document.querySelectorAll('[data-demo-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){ e.preventDefault(); var b=f.querySelector('button[type=submit]'); b.textContent='Saved ✓'; b.disabled=true; setTimeout(function(){ b.disabled=false; b.textContent=b.getAttribute('data-label')||'Save'; },1800); });
+    var b=f.querySelector('button[type=submit]'); b.setAttribute('data-label',b.textContent);
+  });
+  var em='', nm='';
+  try{ em=sessionStorage.getItem('stackly_email')||''; nm=sessionStorage.getItem('stackly_name')||''; }catch(e){}
+  if(!nm && em){ nm=em.split('@')[0].replace(/[._+\-]+/g,' ').replace(/[0-9]+/g,'').trim().split(/\s+/).filter(Boolean).map(function(w){ return w.charAt(0).toUpperCase()+w.slice(1); }).join(' '); }
+  function fill(sel,v){ document.querySelectorAll(sel).forEach(function(n){ n.textContent=v; }); }
+  if(nm){ var pt=nm.split(' '); fill('[data-first]',pt[0]); fill('[data-user-name]',nm); fill('[data-user-initials]',((pt[0]||'')[0]||'')+((pt[1]||'')[0]||'')); }
+  if(em){ fill('[data-user-email]',em); }
+  if(typeof gsap!=='undefined'){
+    gsap.utils.toArray('.dash-card').forEach(function(c,i){ gsap.fromTo(c,{opacity:0,y:16},{opacity:1,y:0,duration:0.5,delay:i*0.08,ease:'power2.out'}); });
+    gsap.fromTo('.dash-bars .b',{scaleY:0},{scaleY:1,transformOrigin:'bottom',duration:0.8,stagger:0.06,ease:'power3.out',delay:0.2});
+    gsap.utils.toArray('.dash-panel').forEach(function(p,i){ gsap.fromTo(p,{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.15+i*0.06,ease:'power2.out'}); });
+  }
+})();
+</script>
+</body>
+</html>

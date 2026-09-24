@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billing — Stackly Shipper Dashboard</title>
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<script>
+/* Dashboard access guard: only reachable after logging in with the matching role */
+(function(){ var r=null; try{ r=sessionStorage.getItem('stackly_role'); }catch(e){} if(r!=='shipper') window.location.replace('login.html'); })();
+</script>
+</head>
+<body class="dash-body">
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<div class="dash-topbar">
+  <a href="shipper-billing.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+  <button type="button" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+<div class="dash-scrim" id="dashScrim"></div>
+
+<div class="dash-shell">
+  <aside class="dash-side" id="dashSide">
+    <a class="dash-brand" href="shipper-billing.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+    <div class="dash-user"><span class="roster-avatar" data-user-initials>JM</span><div><b data-user-name>Jordan M.</b><small data-user-email>jordan@email.com</small><i>Shipper account</i></div></div>
+    <div class="dash-nav-label">Menu</div>
+    <nav class="dash-nav"><a href="dashboard-shipper.html">Overview</a><a href="shipper-plan.html">This Week's Solution</a><a href="shipper-shipments.html">Shipment Log &amp; PRs</a><a href="shipper-proof.html">Delivery Proof Check-Ins</a><a href="shipper-inventory.html">Inventory</a><a href="shipper-messages.html">Messages</a><a href="shipper-billing.html" class="active">Billing</a></nav>
+    <a class="dash-logout" href="login.html" data-logout>Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>Billing</h1>
+        <p style="margin-top:6px;">Plan, invoices and payment details</p>
+      </div>
+      <a class="btn btn-solid btn-sm" href="404.html">Update Payment Method</a>
+    </div>
+    <section class="dash-panel"><h3>Snapshot</h3><div class="dash-cards"><div class="dash-card"><div class="d-num">Foundations</div><div class="d-lbl">Current Plan</div></div><div class="dash-card"><div class="d-num">$189</div><div class="d-lbl">Monthly</div></div><div class="dash-card"><div class="d-num">Oct 1</div><div class="d-lbl">Next Charge</div></div><div class="dash-card"><div class="d-num">Jun 2026</div><div class="d-lbl">Member Since</div></div></div></section><section class="dash-panel"><h3>Current plan</h3><table class="dash-table"><thead><tr><th>Included</th><th>Details</th></tr></thead><tbody><tr><td>Solution</td><td>Warehousing &amp; Fulfilment — 12-week block</td></tr><tr><td>Account Manager</td><td>Marcus Cole</td></tr><tr><td>Delivery Proof reviews</td><td>1 per week, replied within 24 hours</td></tr><tr><td>Check-ins</td><td>Weekly message check-in</td></tr><tr><td>Cancellation</td><td>Cancel anytime — no contract</td></tr></tbody></table></section><section class="dash-panel"><h3>Invoice history</h3><table class="dash-table"><thead><tr><th>Invoice</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td>INV-1042</td><td>Sep 01, 2026</td><td>$189.00</td><td><span class="dash-pill on">Paid</span></td></tr><tr><td>INV-0988</td><td>Aug 01, 2026</td><td>$189.00</td><td><span class="dash-pill on">Paid</span></td></tr><tr><td>INV-0931</td><td>Jul 01, 2026</td><td>$189.00</td><td><span class="dash-pill on">Paid</span></td></tr></tbody></table></section><section class="dash-panel"><h3><span id="payment"></span>Payment method</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field "><label>Card number</label><input type="text" placeholder="Visa ending 4242" required></div><div class="f-field "><label>Expiry</label><input type="text" placeholder="08 / 28" required></div><div class="f-field "><label>Billing email</label><input type="email" placeholder="jordan@email.com" required></div></div><button type="submit" class="btn btn-solid btn-sm">Update Card</button></form></section><section class="dash-panel"><h3>Change plan</h3><div class="dash-minis"><div class="mini"><b>Warehousing &amp; Fulfilment</b><p>Barbell fundamentals with weekly form review.</p><span>$189 / mo</span></div><div class="mini"><b>Freight &amp; Transport</b><p>Industry-specific power and conditioning.</p><span>$249 / mo</span></div><div class="mini"><b>Supply Chain Optimization</b><p>Capacity plus inventory account management.</p><span>$219 / mo</span></div></div></section><section class="dash-panel"><h3>Plan usage this month</h3><div class="prog-list"><div class="prog-row"><div class="pr-top"><b>Delivery Proof reviews</b><span>3 / 4</span></div><div class="pr-track"><span style="width:75%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Account Manager check-ins</b><span>4 / 4</span></div><div class="pr-track"><span style="width:100%"></span></div></div><div class="prog-row"><div class="pr-top"><b>Retest slots</b><span>0 / 1</span></div><div class="pr-track"><span style="width:0%"></span></div></div></div></section><section class="dash-panel"><h3>Billing preferences</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field f-tog"><label>Email receipts</label><label class="tog"><input type="checkbox" checked><span></span></label></div><div class="f-field f-tog"><label>Payment reminders</label><label class="tog"><input type="checkbox" checked><span></span></label></div><div class="f-field f-tog"><label>Annual summary</label><label class="tog"><input type="checkbox" ><span></span></label></div></div><button type="submit" class="btn btn-solid btn-sm">Save Preferences</button></form></section>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var side=document.getElementById('dashSide'), scrim=document.getElementById('dashScrim'), btn=document.getElementById('dashMenuBtn');
+  function set(o){ side.classList.toggle('open',o); scrim.classList.toggle('show',o); }
+  btn.addEventListener('click',function(){ set(!side.classList.contains('open')); });
+  scrim.addEventListener('click',function(){ set(false); });
+  document.querySelectorAll('[data-demo-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){ e.preventDefault(); var b=f.querySelector('button[type=submit]'); b.textContent='Saved ✓'; b.disabled=true; setTimeout(function(){ b.disabled=false; b.textContent=b.getAttribute('data-label')||'Save'; },1800); });
+    var b=f.querySelector('button[type=submit]'); b.setAttribute('data-label',b.textContent);
+  });
+  var em='', nm='';
+  try{ em=sessionStorage.getItem('stackly_email')||''; nm=sessionStorage.getItem('stackly_name')||''; }catch(e){}
+  if(!nm && em){ nm=em.split('@')[0].replace(/[._+\-]+/g,' ').replace(/[0-9]+/g,'').trim().split(/\s+/).filter(Boolean).map(function(w){ return w.charAt(0).toUpperCase()+w.slice(1); }).join(' '); }
+  function fill(sel,v){ document.querySelectorAll(sel).forEach(function(n){ n.textContent=v; }); }
+  if(nm){ var pt=nm.split(' '); fill('[data-first]',pt[0]); fill('[data-user-name]',nm); fill('[data-user-initials]',((pt[0]||'')[0]||'')+((pt[1]||'')[0]||'')); }
+  if(em){ fill('[data-user-email]',em); }
+  if(typeof gsap!=='undefined'){
+    gsap.utils.toArray('.dash-card').forEach(function(c,i){ gsap.fromTo(c,{opacity:0,y:16},{opacity:1,y:0,duration:0.5,delay:i*0.08,ease:'power2.out'}); });
+    gsap.fromTo('.dash-bars .b',{scaleY:0},{scaleY:1,transformOrigin:'bottom',duration:0.8,stagger:0.06,ease:'power3.out',delay:0.2});
+    gsap.utils.toArray('.dash-panel').forEach(function(p,i){ gsap.fromTo(p,{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.15+i*0.06,ease:'power2.out'}); });
+  }
+})();
+</script>
+</body>
+</html>

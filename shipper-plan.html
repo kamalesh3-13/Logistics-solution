@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Week's Solution — Stackly Shipper Dashboard</title>
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<script>
+/* Dashboard access guard: only reachable after logging in with the matching role */
+(function(){ var r=null; try{ r=sessionStorage.getItem('stackly_role'); }catch(e){} if(r!=='shipper') window.location.replace('login.html'); })();
+</script>
+</head>
+<body class="dash-body">
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<div class="dash-topbar">
+  <a href="shipper-plan.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+  <button type="button" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+<div class="dash-scrim" id="dashScrim"></div>
+
+<div class="dash-shell">
+  <aside class="dash-side" id="dashSide">
+    <a class="dash-brand" href="shipper-plan.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+    <div class="dash-user"><span class="roster-avatar" data-user-initials>JM</span><div><b data-user-name>Jordan M.</b><small data-user-email>jordan@email.com</small><i>Shipper account</i></div></div>
+    <div class="dash-nav-label">Menu</div>
+    <nav class="dash-nav"><a href="dashboard-shipper.html">Overview</a><a href="shipper-plan.html" class="active">This Week's Solution</a><a href="shipper-shipments.html">Shipment Log &amp; PRs</a><a href="shipper-proof.html">Delivery Proof Check-Ins</a><a href="shipper-inventory.html">Inventory</a><a href="shipper-messages.html">Messages</a><a href="shipper-billing.html">Billing</a></nav>
+    <a class="dash-logout" href="login.html" data-logout>Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>This Week's Solution</h1>
+        <p style="margin-top:6px;">Warehousing &amp; Fulfilment — Week 7 of 12</p>
+      </div>
+      <a class="btn btn-solid btn-sm" href="404.html">Log Today's Shipment</a>
+    </div>
+    <section class="dash-panel"><h3>Snapshot</h3><div class="dash-cards"><div class="dash-card"><div class="d-num">7 / 12</div><div class="d-lbl">Block Week</div></div><div class="dash-card"><div class="d-num">2 / 4</div><div class="d-lbl">Routes Done</div></div><div class="dash-card"><div class="d-num">14,820</div><div class="d-lbl">Volume (lbs)</div></div><div class="dash-card"><div class="d-num">7.5</div><div class="d-lbl">Avg Priority</div></div></div></section><section class="dash-panel"><h3>Week schedule</h3><table class="dash-table"><thead><tr><th>Day</th><th>Route</th><th>Main Load</th><th>Status</th></tr></thead><tbody><tr><td>Monday</td><td>Regional Feeder</td><td>245 lbs cross-dock transfer</td><td><span class="dash-pill on">Completed</span></td></tr><tr><td>Tuesday</td><td>Dock Transfer</td><td>185 lbs, 5 stops</td><td><span class="dash-pill on">Completed</span></td></tr><tr><td>Thursday</td><td>Pallet Run</td><td>315 lbs, 3 stops</td><td><span class="dash-pill due">Due Today</span></td></tr><tr><td>Friday</td><td>Last-Mile Loop</td><td>105 lbs, 6 stops</td><td><span class="dash-pill due">Upcoming</span></td></tr></tbody></table></section><section class="dash-panel"><h3>Today's route — Pallet Run</h3><table class="dash-table"><thead><tr><th>Leg</th><th>Stops</th><th>Load</th><th>Dwell</th></tr></thead><tbody><tr><td>Pallet drop-off</td><td>3</td><td>315 lbs</td><td>3 min</td></tr><tr><td>Return leg pickup</td><td>3</td><td>205 lbs</td><td>2 min</td></tr><tr><td>Local delivery loop</td><td>10 / zone</td><td>40 lb parcels</td><td>90 s</td></tr><tr><td>Dock handoff</td><td>4</td><td>—</td><td>90 s</td></tr><tr><td>Staging &amp; scan-in</td><td>—</td><td>—</td><td>60 s</td></tr></tbody></table></section><section class="dash-panel"><h3>12-week rollout map</h3><ul class="feed"><li><span class="f-dot"></span><div><b>Weeks 1–3 · Base</b><small>Network setup and volume ramp</small></div><em>Done</em></li><li><span class="f-dot"></span><div><b>Weeks 4–6 · Build</b><small>Heavier working loads</small></div><em>Done</em></li><li><span class="f-dot"></span><div><b>Weeks 7–9 · Intensify</b><small>Where you are now</small></div><em>Now</em></li><li><span class="f-dot"></span><div><b>Weeks 10–11 · Peak</b><small>Peak-capacity routes</small></div><em>Soon</em></li><li><span class="f-dot"></span><div><b>Week 12 · Review</b><small>Full network performance audit</small></div><em>Soon</em></li></ul></section><section class="dash-panel"><h3>Pre-route checklist</h3><ul class="checklist"><li class="done"><span></span>Confirm vehicle and trailer are ready</li><li class="done"><span></span>Review route map and stop order</li><li class=""><span></span>Check load manifest against pallet count</li><li class=""><span></span>Test scanner and POD app</li><li class=""><span></span>Confirm dock appointment windows</li></ul></section><section class="dash-panel"><h3>Notes from Account Manager Marcus</h3><p class="dash-text">Pallet Run day. Double-check the manifest before you leave the yard — that's the fix we flagged last week. If the first stop is running behind, hold the later drop-offs rather than rushing the dock handoff.</p><p class="dash-text">Keep everything at priority 8 or below this week. We're building toward the review, not chasing single-load records.</p></section><section class="dash-panel"><h3>Next week preview</h3><div class="dash-minis"><div class="mini"><b>Regional Feeder</b><p>255 lbs cross-dock transfer</p><span>Mon</span></div><div class="mini"><b>Dock Transfer</b><p>195 lbs, 5 stops</p><span>Tue</span></div><div class="mini"><b>Network review</b><p>Route audit and delivery proof check-in</p><span>Fri</span></div></div></section>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var side=document.getElementById('dashSide'), scrim=document.getElementById('dashScrim'), btn=document.getElementById('dashMenuBtn');
+  function set(o){ side.classList.toggle('open',o); scrim.classList.toggle('show',o); }
+  btn.addEventListener('click',function(){ set(!side.classList.contains('open')); });
+  scrim.addEventListener('click',function(){ set(false); });
+  document.querySelectorAll('[data-demo-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){ e.preventDefault(); var b=f.querySelector('button[type=submit]'); b.textContent='Saved ✓'; b.disabled=true; setTimeout(function(){ b.disabled=false; b.textContent=b.getAttribute('data-label')||'Save'; },1800); });
+    var b=f.querySelector('button[type=submit]'); b.setAttribute('data-label',b.textContent);
+  });
+  var em='', nm='';
+  try{ em=sessionStorage.getItem('stackly_email')||''; nm=sessionStorage.getItem('stackly_name')||''; }catch(e){}
+  if(!nm && em){ nm=em.split('@')[0].replace(/[._+\-]+/g,' ').replace(/[0-9]+/g,'').trim().split(/\s+/).filter(Boolean).map(function(w){ return w.charAt(0).toUpperCase()+w.slice(1); }).join(' '); }
+  function fill(sel,v){ document.querySelectorAll(sel).forEach(function(n){ n.textContent=v; }); }
+  if(nm){ var pt=nm.split(' '); fill('[data-first]',pt[0]); fill('[data-user-name]',nm); fill('[data-user-initials]',((pt[0]||'')[0]||'')+((pt[1]||'')[0]||'')); }
+  if(em){ fill('[data-user-email]',em); }
+  if(typeof gsap!=='undefined'){
+    gsap.utils.toArray('.dash-card').forEach(function(c,i){ gsap.fromTo(c,{opacity:0,y:16},{opacity:1,y:0,duration:0.5,delay:i*0.08,ease:'power2.out'}); });
+    gsap.fromTo('.dash-bars .b',{scaleY:0},{scaleY:1,transformOrigin:'bottom',duration:0.8,stagger:0.06,ease:'power3.out',delay:0.2});
+    gsap.utils.toArray('.dash-panel').forEach(function(p,i){ gsap.fromTo(p,{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.15+i*0.06,ease:'power2.out'}); });
+  }
+})();
+</script>
+</body>
+</html>

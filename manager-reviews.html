@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delivery Proof Review Queue — Stackly Account Manager Dashboard</title>
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<script>
+/* Dashboard access guard: only reachable after logging in with the matching role */
+(function(){ var r=null; try{ r=sessionStorage.getItem('stackly_role'); }catch(e){} if(r!=='manager') window.location.replace('login.html'); })();
+</script>
+</head>
+<body class="dash-body">
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<div class="dash-topbar">
+  <a href="manager-reviews.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+  <button type="button" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</div>
+<div class="dash-scrim" id="dashScrim"></div>
+
+<div class="dash-shell">
+  <aside class="dash-side" id="dashSide">
+    <a class="dash-brand" href="manager-reviews.html"><img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42"></a>
+    <div class="dash-user"><span class="roster-avatar" data-user-initials>CM</span><div><b data-user-name>Account Manager Marcus</b><small data-user-email>marcus@stackly.com</small><i>Account Manager account</i></div></div>
+    <div class="dash-nav-label">Menu</div>
+    <nav class="dash-nav"><a href="dashboard-manager.html">Overview</a><a href="manager-shippers.html">My Shippers</a><a href="manager-reviews.html" class="active">Delivery Proof Review Queue</a><a href="manager-messages.html">Messages</a><a href="manager-planning.html">Planning</a><a href="manager-payouts.html">Payouts</a><a href="manager-settings.html">Settings</a></nav>
+    <a class="dash-logout" href="login.html" data-logout>Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>Delivery Proof Review Queue</h1>
+        <p style="margin-top:6px;">Reply to every check-in within 24 hours</p>
+      </div>
+      <a class="btn btn-solid btn-sm" href="404.html">Review Next Delivery Proof</a>
+    </div>
+    <section class="dash-panel"><h3>Snapshot</h3><div class="dash-cards"><div class="dash-card"><div class="d-num">3</div><div class="d-lbl">Awaiting Review</div></div><div class="dash-card"><div class="d-num">11</div><div class="d-lbl">Reviewed This Week</div></div><div class="dash-card"><div class="d-num">18h</div><div class="d-lbl">Avg Turnaround</div></div><div class="dash-card"><div class="d-num">96%</div><div class="d-lbl">Within 24h</div></div></div></section><section class="dash-panel"><h3><span id="queue"></span>Queue</h3><table class="dash-table"><thead><tr><th>Shipper</th><th>Delivery</th><th>Submitted</th><th>Status</th></tr></thead><tbody><tr><td>Jordan M.</td><td>Pallet drop, Zone 4 — photo</td><td>2 hours ago</td><td><span class="dash-pill due">Awaiting Review</span></td></tr><tr><td>Priya S.</td><td>Front dock — signature capture</td><td>5 hours ago</td><td><span class="dash-pill due">Awaiting Review</span></td></tr><tr><td>Alex R.</td><td>Cold chain — temp log</td><td>Yesterday</td><td><span class="dash-pill due">Awaiting Review</span></td></tr><tr><td>Sam K.</td><td>Route 12 — drop-off photo</td><td>Yesterday</td><td><span class="dash-pill on">Reviewed</span></td></tr></tbody></table></section><section class="dash-panel"><h3>Review checklist</h3><ul class="checklist"><li class="done"><span></span>Open the full photo set, not just the thumbnail</li><li class="done"><span></span>Check timestamp and GPS pin against the route</li><li class=""><span></span>Flag one issue — not five</li><li class=""><span></span>Reply with a timestamp</li><li class=""><span></span>Log the review in the shipper's notes</li></ul></section><section class="dash-panel"><h3>Common notes</h3><div class="dash-minis"><div class="mini"><b>Confirm the signature</b><p>Match name on file before approving.</p><span>Signature capture</span></div><div class="mini"><b>Check the temp log</b><p>Flag anything outside the cold-chain range.</p><span>Cold chain</span></div><div class="mini"><b>Angle the photo</b><p>Get the dock number in frame.</p><span>Dock drop</span></div></div></section><section class="dash-panel"><h3>Turnaround time (hours)</h3><div class="dash-bars"><div class="b" style="height:90%"></div><div class="b" style="height:82%"></div><div class="b" style="height:78%"></div><div class="b" style="height:74%"></div><div class="b" style="height:70%"></div><div class="b" style="height:66%"></div><div class="b" style="height:66%"></div></div><div class="dash-bar-labels"><span>Aug 10</span><span>Aug 17</span><span>Aug 24</span><span>Aug 31</span><span>Sep 07</span><span>Sep 14</span><span>Sep 21</span></div></section><section class="dash-panel"><h3>Reviewed this week</h3><ul class="feed"><li><span class="f-dot"></span><div><b>Sam K. — Route 12 drop-off</b><small>Photo clear; approved.</small></div><em>Yesterday</em></li><li><span class="f-dot"></span><div><b>Erin L. — Pallet drop</b><small>Great angle. Keep it.</small></div><em>Mon</em></li><li><span class="f-dot"></span><div><b>Dana W. — Dock signature</b><small>Name matched, all good.</small></div><em>Mon</em></li></ul></section><section class="dash-panel"><h3>Send feedback</h3><form class="dash-form" data-demo-form data-redirect-404><div class="df-grid"><div class="f-field "><label>Shipper</label><select><option>Jordan M.</option><option>Priya S.</option><option>Alex R.</option></select></div><div class="f-field "><label>Delivery</label><select><option>Pallet drop</option><option>Dock signature</option><option>Cold chain log</option></select></div><div class="f-field "><label>Main note</label><textarea rows="3" placeholder="One clear note for next time…" required></textarea></div><div class="f-field "><label>Rating</label><select><option>Great</option><option>Good</option><option>Needs work</option></select></div></div><button type="submit" class="btn btn-solid btn-sm">Send Feedback</button></form></section>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var side=document.getElementById('dashSide'), scrim=document.getElementById('dashScrim'), btn=document.getElementById('dashMenuBtn');
+  function set(o){ side.classList.toggle('open',o); scrim.classList.toggle('show',o); }
+  btn.addEventListener('click',function(){ set(!side.classList.contains('open')); });
+  scrim.addEventListener('click',function(){ set(false); });
+  document.querySelectorAll('[data-demo-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){ e.preventDefault(); var b=f.querySelector('button[type=submit]'); b.textContent='Saved ✓'; b.disabled=true; setTimeout(function(){ b.disabled=false; b.textContent=b.getAttribute('data-label')||'Save'; },1800); });
+    var b=f.querySelector('button[type=submit]'); b.setAttribute('data-label',b.textContent);
+  });
+  var em='', nm='';
+  try{ em=sessionStorage.getItem('stackly_email')||''; nm=sessionStorage.getItem('stackly_name')||''; }catch(e){}
+  if(!nm && em){ nm=em.split('@')[0].replace(/[._+\-]+/g,' ').replace(/[0-9]+/g,'').trim().split(/\s+/).filter(Boolean).map(function(w){ return w.charAt(0).toUpperCase()+w.slice(1); }).join(' '); }
+  function fill(sel,v){ document.querySelectorAll(sel).forEach(function(n){ n.textContent=v; }); }
+  if(nm){ var pt=nm.split(' '); fill('[data-first]',pt[0]); fill('[data-user-name]',nm); fill('[data-user-initials]',((pt[0]||'')[0]||'')+((pt[1]||'')[0]||'')); }
+  if(em){ fill('[data-user-email]',em); }
+  if(typeof gsap!=='undefined'){
+    gsap.utils.toArray('.dash-card').forEach(function(c,i){ gsap.fromTo(c,{opacity:0,y:16},{opacity:1,y:0,duration:0.5,delay:i*0.08,ease:'power2.out'}); });
+    gsap.fromTo('.dash-bars .b',{scaleY:0},{scaleY:1,transformOrigin:'bottom',duration:0.8,stagger:0.06,ease:'power3.out',delay:0.2});
+    gsap.utils.toArray('.dash-panel').forEach(function(p,i){ gsap.fromTo(p,{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.15+i*0.06,ease:'power2.out'}); });
+  }
+})();
+</script>
+</body>
+</html>

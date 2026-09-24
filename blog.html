@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Stackly</title>
+<meta name="description" content="Logistics insights on planning, technique and recovery from the Stackly staff — no logistics-influencer noise.">
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+<style>
+.c-bio{margin:10px 0 0;font-size:14px;line-height:1.5;opacity:.75}
+@media (max-width:900px){ .nav-links,.nav-right{display:none !important;} .burger{display:flex !important;} }</style>
+</head>
+<body>
+<div id="preloader" aria-hidden="true">
+  <div class="pl-inner"><img class="pl-logo" src="assets/logo-mark.webp" alt=""><div class="pl-bar"><span></span></div></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Solutions</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a class="login" href="login.html">Log in</a>
+      <a class="nav-cta" href="contact.html">Get a Quote</a>
+    </div>
+    <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+  </nav>
+</header>
+
+<div class="mobile-nav-scrim" id="mobileNavScrim"></div>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Solutions</a>
+  <a href="about.html">About</a>
+  <a href="blog.html" class="active">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a class="login" href="login.html">Log in</a>
+  <a class="nav-cta" href="contact.html">Get a Quote</a>
+</div>
+
+<section class="page-hero has-photo">
+  <div class="ph-photo"><img src="assets/img/hero-10.webp" alt="Container terminal cranes at night" width="1400" height="900" decoding="async" fetchpriority="high" style="object-position:50% 45%"></div>
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Stackly</a> / Blog</div>
+    <h1 data-split>Logistics insights, not noise.</h1>
+    <p class="lede">Planning breakdowns, technique fixes and recovery guidance written by the account managers who actually run this stuff with clients every week.</p>
+  </div>
+</section>
+
+<!-- ===== BROWSE BY TOPIC (image/gallery section) ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">Browse By Topic</div>
+        <h2>Four subjects, every account management note fits one.</h2>
+      </div>
+    </div>
+    <div class="gallery-grid reveal-group">
+      <div class="gallery-tile has-img" data-fx="spot">
+        <img class="g-img" src="assets/img/gym-01.webp" alt="Driver wheeling a hand truck up a ramp" width="800" height="1000" loading="lazy" decoding="async" style="object-position:50% 40%"><div class="g-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="4" y="20" width="6" height="8" rx="1"/><rect x="10" y="17" width="4" height="14" rx="1"/><line x1="14" y1="24" x2="34" y2="24"/><rect x="34" y="17" width="4" height="14" rx="1"/><rect x="38" y="20" width="6" height="8" rx="1"/></svg></div>
+        <span class="fx" aria-hidden="true"></span>
+        <div class="g-cap"><b>Capacity</b><span>Planning &amp; progression</span></div>
+      </div>
+      <div class="gallery-tile has-img" data-fx="scan">
+        <img class="g-img" src="assets/img/gym-08.webp" alt="Wheel loader loading a flatbed truck" width="900" height="600" loading="lazy" decoding="async" style="object-position:50% 50%"><div class="g-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="11"/><circle cx="24" cy="24" r="4" fill="currentColor" stroke="none"/></svg></div>
+        <span class="fx" aria-hidden="true"></span>
+        <div class="g-cap"><b>Technique</b><span>Form fixes from the floor</span></div>
+      </div>
+      <div class="gallery-tile has-img" data-fx="glow">
+        <img class="g-img" src="assets/img/gym-10.webp" alt="Picker taking stock from labelled bins" width="900" height="601" loading="lazy" decoding="async" style="object-position:40% 50%"><div class="g-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 28a16 16 0 1 1-18-24 12 12 0 0 0 18 24z"/></svg></div>
+        <span class="fx" aria-hidden="true"></span>
+        <div class="g-cap"><b>Recovery</b><span>Buffer Stocks, sleep &amp; downtime</span></div>
+      </div>
+      <div class="gallery-tile has-img" data-fx="shine">
+        <img class="g-img" src="assets/img/gym-04.webp" alt="Team unloading rolls from a shipping container" width="900" height="600" loading="lazy" decoding="async" style="object-position:40% 50%"><div class="g-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="9"/></svg></div>
+        <span class="fx" aria-hidden="true"></span>
+        <div class="g-cap"><b>Inventory</b><span>Targets that survive real life</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-bone2">
+  <div class="wrap">
+    <div class="tabs-bar" style="margin-bottom:50px;">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="strength">Capacity</button>
+      <button data-filter="technique">Technique</button>
+      <button data-filter="recovery">Recovery</button>
+      <button data-filter="nutrition">Inventory</button>
+    </div>
+    <div class="blog-grid reveal-group" data-anim="flip">
+      <a class="blog-card" href="404.html" data-cat="strength">
+        <div class="blog-thumb" data-fx="heat"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-11.webp" alt="Timber stock on warehouse racks" width="562" height="1000" loading="lazy" decoding="async" style="object-position:50% 25%"><span>Planning</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Capacity · 6 min read</div>
+          <h3>Continuous improvement without the guesswork</h3>
+          <p>Adding weight every week isn't a solution — it's how you end up hurt. Here's what actually drives a shipment forward, block over block.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="technique">
+        <div class="blog-thumb" data-fx="brackets"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-07.webp" alt="Steel beams stacked in a storage yard" width="900" height="600" loading="lazy" decoding="async" style="object-position:50% 45%"><span>Technique</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Operations · 8 min read</div>
+          <h3>Why your delivery times plateau (and how to fix it)</h3>
+          <p>Nine times out of ten it isn't your drivers — it's your dispatch setup. An account manager's breakdown of the usual suspects and the fixes that work.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="recovery">
+        <div class="blog-thumb" data-fx="aurora"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-15.webp" alt="Rolls of fabric on warehouse shelves" width="900" height="600" loading="lazy" decoding="async" style="object-position:40% 50%"><span>Recovery</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Recovery · 5 min read</div>
+          <h3>Recovery isn't optional — a guide to buffer stock weeks</h3>
+          <p>Skipping your buffer stock doesn't make you tougher. It makes your next block slower. Here's how we actually schedule them.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="nutrition">
+        <div class="blog-thumb" data-fx="beam"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-06.webp" alt="Warehouse operative beside a wrapped pallet" width="900" height="900" loading="lazy" decoding="async" style="object-position:50% 50%"><span>Inventory</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Inventory · 7 min read</div>
+          <h3>Reorder targets that survive real life</h3>
+          <p>Most reorder points fall apart on a busy Tuesday. Here's the version our cost-optimization clients actually stick to for a year.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="strength">
+        <div class="blog-thumb" data-fx="spot"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-09.webp" alt="Racking loaded with drums and pails" width="563" height="1000" loading="lazy" decoding="async" style="object-position:50% 45%"><span>Capacity</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Capacity · 9 min read</div>
+          <h3>How we actually plan a 12-week block</h3>
+          <p>A look inside the same block-building process every Stackly account manager uses, from volume phase to peak week.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="technique">
+        <div class="blog-thumb" data-fx="scan"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-12.webp" alt="Container yard beside a service road" width="667" height="1000" loading="lazy" decoding="async" style="object-position:50% 40%"><span>Technique</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Technique · 6 min read</div>
+          <h3>The dock setup mistake we see every week</h3>
+          <p>Your dock door isn't the problem. Your staging order is. A simple fix that adds capacity without touching your headcount.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="recovery">
+        <div class="blog-thumb" data-fx="glow"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-17.webp" alt="Container ship at sunset" width="900" height="601" loading="lazy" decoding="async" style="object-position:50% 45%"><span>Recovery</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Recovery · 4 min read</div>
+          <h3>Downtime is the metric nobody wants to hear about</h3>
+          <p>We pulled the numbers from 200 shipper check-ins. Scheduled vehicle downtime predicted capacity gains better than anything else we track.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="strength">
+        <div class="blog-thumb" data-fx="shine"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-16.webp" alt="Driver signing a delivery form" width="667" height="1000" loading="lazy" decoding="async" style="object-position:50% 65%"><span>Capacity</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Capacity · 5 min read</div>
+          <h3>Delivery proof: what actually counts</h3>
+          <p>Timestamp, GPS pin and a clear signature, every drop, not a judgment call. Here's how we grade it and why it matters.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+      <a class="blog-card" href="404.html" data-cat="nutrition">
+        <div class="blog-thumb" data-fx="heat"><i class="fx" aria-hidden="true"></i><img src="assets/img/gym-02.webp" alt="Warehouse loading dock with a forklift" width="667" height="1000" loading="lazy" decoding="async" style="object-position:50% 40%"><span>Inventory</span></div>
+        <div class="blog-body">
+          <div class="blog-meta">Inventory · 6 min read</div>
+          <h3>Stocking enough to move heavy freight</h3>
+          <p>Under-stocking is the most common reason a capacity block stalls out. Signs you're leaving progress on the table.</p>
+          <span class="blog-read">Read the article <span class="mi mi-arrow_forward" aria-hidden="true"></span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split-media">
+    <div class="m-copy">
+      <div class="tag">Written For You, Specifically</div>
+      <h2>The blog is generic. Your account management isn't.</h2>
+      <p class="lede">Everything here is written for anyone. A managed shipper gets the same reasoning applied to their exact numbers, their exact shipments, their exact week — not a general audience.</p>
+      <div class="m-points">
+        <span>Weekly notes from your account manager reference your actual operations block</span>
+        <span>Questions get answered for your situation, not a comment section</span>
+        <span>No ads, no affiliate links — just the account management you're paying for</span>
+      </div>
+      <a class="btn btn-solid btn-sm" href="404.html" style="margin-top:26px;">Get a Quote</a>
+    </div>
+    <div class="m-visual">
+      <div class="media-panel has-img tall" data-fx="glow">
+        <img class="m-img" src="assets/img/panel-coaching-notes.webp" alt="Stacked shipping containers under a blue sky" width="900" height="1008" loading="lazy" decoding="async">
+        <span class="fx" aria-hidden="true"></span>
+        <div class="m-tag">Account Management Notes, Personalized</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-dark on-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">Most Read</div>
+        <h2>The account management notes shippers come back to.</h2>
+      </div>
+    </div>
+    <div class="feature-grid reveal-group" data-anim="pop">
+      <div class="feature-card" data-fx="scan"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5,34 17,22 25,29 43,10"/><polyline points="32,10 43,10 43,21"/></svg></div>
+        <h3>Continuous improvement, done right</h3>
+        <p>The most bookmarked post on the blog — why adding weight blindly isn't a solution.</p>
+      </div>
+      <div class="feature-card" data-fx="glow"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="11"/><circle cx="24" cy="24" r="4" fill="currentColor" stroke="none"/></svg></div>
+        <h3>The delivery-times plateau breakdown</h3>
+        <p>Our most-shared operations post — the dispatch mistake behind most missed windows.</p>
+      </div>
+      <div class="feature-card" data-fx="shine"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 28a16 16 0 1 1-18-24 12 12 0 0 0 18 24z"/></svg></div>
+        <h3>Sleep predicts capacity gains</h3>
+        <p>Data from 200 shipper check-ins — the recovery post that changes routines.</p>
+      </div>
+      <div class="feature-card" data-fx="heat"><i class="fx" aria-hidden="true"></i>
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="9"/></svg></div>
+        <h3>Eating enough to shipment heavy</h3>
+        <p>The inventory post we send to every shipper stuck on a capacity plateau.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEET THE WRITERS ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">Meet The Writers</div>
+        <h2>Every post is written by someone who runs freight.</h2>
+      </div>
+      <p class="lede">Our authors work live accounts every week, so the advice on this blog comes from the lanes, docks and vehicles they manage.</p>
+    </div>
+    <div class="team-grid reveal-group" data-anim="slide">
+      <div class="team-card">
+        <div class="team-photo" data-fx="heat"><i class="fx" aria-hidden="true"></i><img src="assets/img/home/team-marcus.webp" alt="Marcus Cole, Head of Operations" width="640" height="640" loading="lazy" style="object-position:50% 25%"></div>
+        <div class="team-info"><div class="c-name">Marcus Cole</div><div class="c-role">Head of Operations</div><p class="c-bio">Writes about capacity planning, network design and cost per shipment.</p></div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" data-fx="brackets"><i class="fx" aria-hidden="true"></i><img src="assets/img/home/team-dana.webp" alt="Dana Reyes, Freight Lead" width="640" height="640" loading="lazy" style="object-position:72% 30%"></div>
+        <div class="team-info"><div class="c-name">Dana Reyes</div><div class="c-role">Freight Lead</div><p class="c-bio">Writes about carrier selection, lane pricing and transit times.</p></div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" data-fx="aurora"><i class="fx" aria-hidden="true"></i><img src="assets/img/home/team-theo.webp" alt="Theo Bryant, Cold Chain &amp; Compliance" width="640" height="640" loading="lazy" style="object-position:45% 30%"></div>
+        <div class="team-info"><div class="c-name">Theo Bryant</div><div class="c-role">Cold Chain &amp; Compliance</div><p class="c-bio">Writes about safety stock, cold chain and compliance.</p></div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" data-fx="beam"><i class="fx" aria-hidden="true"></i><img src="assets/img/home/team-priya.webp" alt="Priya Nair, Last-Mile Lead" width="640" height="640" loading="lazy" style="object-position:68% 35%"></div>
+        <div class="team-info"><div class="c-name">Priya Nair</div><div class="c-role">Last-Mile Lead</div><p class="c-bio">Writes about last-mile routing, delivery proof and customer updates.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG FAQ ===== -->
+<section class="sec-bone2">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="tag">Blog Questions</div>
+        <h2>How the Stackly blog works.</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q"><span>How often do you publish new posts?</span><span class="plus">+</span></button>
+        <div class="faq-a" style="height:auto;"><p>We publish one or two posts a week. Each one is reviewed by an account manager who has handled the situation it describes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Can I suggest a topic?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. Send your question through the contact page or reply to the weekly newsletter. Topics that come up across several shippers usually become a post.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Are the posts written for my own operation?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Blog posts are general. If you are a managed shipper, your account manager applies the same ideas to your own lanes, volumes and delivery windows.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Can I share or republish an article?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>You can share links freely. If you want to republish a post in your own newsletter or intranet, contact us first and we will confirm the details.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-dark" style="background:var(--char); padding:0;">
+  <div class="logo-band" style="border-color:var(--line-dark);">
+    <div class="wrap">
+      <div class="lb-label">Read by shippers operations for</div>
+      <div style="overflow:hidden;">
+        <div class="logo-track">
+          <span>First Meets</span><span>Marathon Blocks</span><span>Off-Season Capacity</span><span>Return From Injury</span><span>Body Recomposition</span><span>Youth Development</span>
+          <span>First Meets</span><span>Marathon Blocks</span><span>Off-Season Capacity</span><span>Return From Injury</span><span>Body Recomposition</span><span>Youth Development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter-cta">
+  <div class="wrap nl-row">
+    <div>
+      <div class="tag">Don't Miss The Next One</div>
+      <h2 style="margin-top:14px;">Get account management notes before they're public.</h2>
+    </div>
+    <form class="nl-form" data-demo-form data-redirect-404>
+      <input type="email" placeholder="you@email.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Want account management notes written for you, specifically?</h2>
+    <a class="btn btn-outline" href="404.html">Get a Quote</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/logo.webp" alt="Stackly" width="145" height="42">
+        </a>
+        <p>Capacity and performance account management, built around your schedule, your equipment and your goals — not a template.</p>
+        <div class="foot-social">
+          <a href="404.html" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="404.html" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg></a>
+          <a href="404.html" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+        </div>
+        <div class="foot-contact">
+          <span>412 Anvil Row, Unit 3, Denver, CO</span>
+          <span>(555) 017-4488</span>
+          <span>account manager@stackly.example</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Solutions</h4>
+        <a href="services.html">Warehousing &amp; Fulfilment</a>
+        <a href="services.html">Freight &amp; Transport</a>
+        <a href="services.html">Supply Chain Optimization</a>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Solutions</a>
+        <a href="about.html">About</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col foot-newsletter">
+        <h4>Newsletter</h4>
+        <p>Logistics insights, once a week.</p>
+        <form class="foot-nl-form" data-demo-form data-redirect-404>
+          <input type="email" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Stackly. All rights reserved.</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
